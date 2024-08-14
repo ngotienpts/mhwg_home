@@ -182,6 +182,10 @@
                 opacity: 0;
                 inset-inline-start: 20px
             }
+            &.not-empty label {
+                opacity: 0;
+                inset-inline-start: 20px
+            }
         }
     
         .form-submit {

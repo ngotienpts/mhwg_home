@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupSearch = document.querySelector('.js__popupSearch')
     const showPopupSearch = document.querySelector('.js__showPopupSearch')
 
+    // form input 
+    const formInputs = document.querySelectorAll(".comment-form-input");
+
 
     // slide
     const fiveSlides = document.querySelectorAll(".js__fiveSlidesContainer");
@@ -34,6 +37,22 @@ document.addEventListener("DOMContentLoaded", function () {
             document.documentElement.scrollTop = 0;
         };
         
+    }
+    // Xử lý sự kiện focus vào thẻ input textarea
+    function handleFocuswithin() {
+        if(!formInputs) return
+        formInputs.forEach((formInput)=>{
+            let inputElement = formInput.querySelector('input, textarea');
+            if (inputElement) {
+                inputElement.addEventListener('input', () => {
+                    if (inputElement.value.trim() !== '') {
+                        formInput.classList.add('not-empty');
+                    } else {
+                        formInput.classList.remove('not-empty');
+                    }
+                });
+            }
+        })
     }
 
     // Sử lý sự kiện show popup video
@@ -302,6 +321,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handlePopupVideo();
         handlePopupSearch();
         handlePopupInfo();
+        handleFocuswithin();
         // scroll
         handleWindowScroll();
         handleSearchNavbar();
