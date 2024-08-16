@@ -2303,6 +2303,12 @@ img {
 .library-primary .article-title a:hover {
   color: #eb162b;
 }
+.library-primary .df-posts > .df-popup-thumb {
+  width: 90% !important;
+}
+.library-primary .df-popup-thumb:hover .df-book-wrapper {
+  transform-origin: 100%;
+}
 
 .library-secondary {
   padding: 50px 30px;

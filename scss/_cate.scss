@@ -292,6 +292,12 @@
             }
         }
     }
+    .df-posts > .df-popup-thumb {
+        width: 90% !important;
+    }
+    .df-popup-thumb:hover .df-book-wrapper {
+        transform-origin: 100%;
+    }
 }
 .library-secondary {
     padding: 50px 30px;
@@ -308,6 +314,8 @@
         background-color: #000;
         object-fit: cover;
     }
+
+    
 
 }
 // end library
